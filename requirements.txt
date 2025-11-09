@@ -1,0 +1,35 @@
+# Core dependencies
+requests>=2.31.0
+python-dotenv>=1.0.0
+
+# LLM API clients
+openai>=1.0.0
+
+# LangChain packages
+langchain-classic>=0.1.0
+langchain-core>=0.1.0
+langchain-openai>=0.1.0
+langchain-ollama>=0.1.0
+langchain-community>=0.0.20
+langchain-text-splitters>=0.0.1
+
+# Vector stores (required for langchain_community.vectorstores.Chroma)
+chromadb
+
+# Document processing (required for document loaders)
+pypdf2  # For PyPDFLoader
+unstructured>=0.10.0  # For UnstructuredMarkdownLoader
+
+# News article extraction
+newspaper3k>=0.2.8
+
+# YouTube video processing
+yt-dlp>=2023.12.30
+openai-whisper>=20231117
+
+# Voice assistant
+streamlit>=1.28.0
+sounddevice>=0.4.6
+soundfile>=0.12.1
+elevenlabs>=1.0.0
+deepgram-sdk>=3.0.0  # Deepgram TTS API client
