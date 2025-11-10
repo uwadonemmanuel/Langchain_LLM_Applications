@@ -9,7 +9,8 @@ The Streamlit Apps Launcher is a tool to manage and launch a variety of Streamli
 ### Available Apps
 
 - **Voice Assistant RAG**: A voice-powered retrieval-augmented generation (RAG) assistant that processes documents and supports text-to-speech (TTS) with both ElevenLabs and Deepgram integration.
-- **Lunar AI Assistant**: Your friendly AI assistant powered by Groq/OpenAI that provides conversational AI capabilities without authentication requirements.
+- **News Summarizer**: Your friendly News Summarizer powered by OpenAI/Ollama models that Summarizes articles.
+- **YouTube Summarizer**: Your friendly YouTube Video Summarizer that downloads and transcribes YouTube videos using Whisper and generates comprehensive summaries of video content.
 
 ## 2. Features
 
@@ -31,7 +32,7 @@ The Streamlit Apps Launcher is a tool to manage and launch a variety of Streamli
 
 ### 4.1. Prerequisites
 
-- Python 3.8+ installed
+- Python 3.12 installed
 - Streamlit installed (`pip install streamlit`)
 - Basic understanding of Python and Streamlit
 
@@ -39,7 +40,7 @@ The Streamlit Apps Launcher is a tool to manage and launch a variety of Streamli
 
 ```bash
 git clone https://github.com/Andela-GenAI/Langchain-LLM-Applications
-cd streamlit-app-launcher
+cd langchain_llm_applications
 ```
 
 ### 4.3. Install Dependencies
@@ -53,12 +54,6 @@ source .venv/bin/activate  # On macOS/Linux
 ```
 
 Install required packages:
-
-```bash
-pip install -r new_requirements.txt
-```
-
-Or if you prefer the full requirements:
 
 ```bash
 pip install -r requirements.txt
@@ -199,7 +194,7 @@ If you encounter a "port already in use" error:
 
 ### App Not Launching
 
-- Ensure all dependencies are installed: `pip install -r new_requirements.txt`
+- Ensure all dependencies are installed: `pip install -r requirements.txt`
 - Check that the app file exists in the project directory
 - Verify that required API keys are set in your `.env` file
 - Check the terminal/console for error messages
