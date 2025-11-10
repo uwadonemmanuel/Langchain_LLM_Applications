@@ -5,7 +5,7 @@ import soundfile as sf
 from elevenlabs.client import ElevenLabs
 import requests
 
-
+from appconfig import env_config
 from langchain_openai import OpenAIEmbeddings
 from langchain_community.vectorstores import Chroma
 from langchain_openai import ChatOpenAI
@@ -492,9 +492,9 @@ def main():
     )
 
     # Check for API keys
-    elevenlabs_api_key = os.getenv("ELEVEN_LABS_API_KEY")
-    deepgram_api_key = os.getenv("DEEPGRAM_API_KEY")
-    openai_api_key = os.getenv("OPENAI_API_KEY")
+    elevenlabs_api_key = os.getenv("ELEVEN_LABS_API_KEY") or env_config.eleven_labs_api_key
+    deepgram_api_key = os.getenv("DEEPGRAM_API_KEY")  or env_config.deepgram_api_key
+    openai_api_key = os.getenv("OPENAI_API_KEY") or env_config.openai_api_key
 
     if not openai_api_key:
         st.error("Please set OPENAI_API_KEY in your environment variables")

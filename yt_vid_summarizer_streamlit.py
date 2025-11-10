@@ -14,6 +14,7 @@ from langchain_classic.chains.summarize import load_summarize_chain
 from langchain_core.documents import Document
 from dotenv import load_dotenv
 import shutil
+from appconfig import env_config
 
 load_dotenv()
 
@@ -30,7 +31,7 @@ class EmbeddingModel:
         if model_type == "openai":
             self.embedding_fn = OpenAIEmbeddings(
                 model="text-embedding-3-small",
-                openai_api_key=os.getenv("OPENAI_API_KEY"),
+                openai_api_key=os.getenv("OPENAI_API_KEY") or env_config.openai_api_key,
             )
         elif model_type == "chroma":
             from langchain_community.embeddings import HuggingFaceEmbeddings
